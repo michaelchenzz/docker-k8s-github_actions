@@ -1,4 +1,4 @@
-name: Deploy Dist folder
+name: Clone Project to Remote
 on: [push]
 jobs:
   test:
