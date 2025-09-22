@@ -1,4 +1,4 @@
-name: Clone Project Code to Remote Runner Automatically
+name: Setup Nodejs and Run Test Cases
 on: [push]
 jobs:
   clone-code:
