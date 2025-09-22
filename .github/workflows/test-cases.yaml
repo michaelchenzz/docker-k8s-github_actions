@@ -1,7 +1,7 @@
 name: Setup Nodejs and Run Test Cases
-on: [push]
+on: workflow_dispatch
 jobs:
-  clone-code:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Repository
