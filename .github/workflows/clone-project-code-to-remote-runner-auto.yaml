@@ -1,0 +1,13 @@
+name: Clone Project Code to Remote Runner Automatically
+on: [push]
+jobs:
+  clone-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v5
+        # run: |
+        #   echo "Cloning the repository..."
+        #   echo "${{ toJson(github) }}"
+        #   git clone https://github.com/${{ github.repository }}.git myfiles
+        #   cd myfiles && ls -la

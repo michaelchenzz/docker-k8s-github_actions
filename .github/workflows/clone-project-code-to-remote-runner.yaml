@@ -1,5 +1,5 @@
-name: Clone Project Code to Remote Runner
-on: [push]
+name: Clone Project Code to Remote Runner Manually
+on: workflow_dispatch
 jobs:
   clone-code:
     runs-on: ubuntu-latest
