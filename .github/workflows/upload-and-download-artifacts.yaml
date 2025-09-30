@@ -60,5 +60,5 @@ jobs:
       - name: Deploy Project
         run: |
           echo "Contents of the dist folder:"
-          ls -la ./dist
+          ls ./dist
           echo "Deploying the project..."
