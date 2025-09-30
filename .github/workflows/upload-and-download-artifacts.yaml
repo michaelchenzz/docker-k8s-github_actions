@@ -1,5 +1,5 @@
-name: Cache Dependencies
-on: workflow_dispatch
+name: Upload and Download Artifacts
+on: push
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -43,9 +43,22 @@ jobs:
         run: npm install
       - name: Build Project
         run: npm run build
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-folder
+          path: dist
   deploy:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-folder
+          path: ./dist
       - name: Deploy Project
-        run: echo "Deploying the project..."
+        run: |
+          echo "Contents of the dist folder:"
+          ls -la ./dist
+          echo "Deploying the project..."
