@@ -1,4 +1,4 @@
-name: Parallel and Sequential Job and Skip Workflow
+name: Cache Dependencies
 on: [push, workflow_dispatch]
 jobs:
   test:
