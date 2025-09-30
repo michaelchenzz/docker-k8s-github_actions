@@ -4,7 +4,7 @@ on:
     branches:
       - main
       - 'feature/**'
-    path_ignore:
+    paths_ignore:
       - '.github/workflows/*'
       - README.md
   workflow_dispatch:
