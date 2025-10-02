@@ -10,7 +10,6 @@ jobs:
         #   echo "Cloning the repository..."
         #   echo "${{ toJson(github) }}"
         #   git clone https://github.com/${{ github.repository }}.git myfiles
-        #   cd myfiles && ls -la
       - name: Install Node.js
         uses: actions/setup-node@v5
         with:
